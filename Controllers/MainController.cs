@@ -6,7 +6,10 @@ public class MainController : Controller
     public IActionResult Index()
 
     {
-        return Ok("This is the index of the HomeController");
+       // return Ok("This is the index of the HomeController");
+
+       return View();
+
     }
     
     public IActionResult Quote()
