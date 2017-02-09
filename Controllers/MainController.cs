@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-
+using FisherInsurance.Models;
+using System;
 public class MainController : Controller
 
 {
@@ -15,6 +16,22 @@ public class MainController : Controller
     public IActionResult Quote()
 
     {
-        return Ok("This is the quote of the HomeController");
+
+        Quote quote = new Quote {
+
+            Id = 345,
+
+            Product = "Home Insurance",
+
+            ExpireDate = DateTime.Now.AddDays(45),
+
+            Price = 45.00M
+
+        };
+
+       // return Ok("This is the quote for the HomeController");
+
+       return View(quote);
+
     }
 }
